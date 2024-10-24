@@ -11,7 +11,12 @@ const h = document.getElementById('input-h').value
 document.getElementById('calculate-area').addEventListener('click',function(){
     console.log('hello clicked me')
     calculateTriangleArea(b,h);
-    const dialouge = document.createElement('dialog')
+    let dialouge = document.getElementById('result-dialouge')
+    if(!dialouge){
+      dialouge=document.createElement('dialog');
+      dialouge.id = 'result-dialouge';
+      document.body.appendChild(dialouge)
+    }
     
     // Set inner content for the dialog
     dialouge.innerHTML = `
