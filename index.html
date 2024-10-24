@@ -19,22 +19,29 @@
     <main>
 
         <!-- main content container -->
-         <div class="w-[1200px] flex mx-auto">
+         <div class="w-[1400px] flex mx-auto">
 
              <!-- div card container -->
-            <div class="w-[60%] bg-blue-400 grid grid-cols-2 gap-4">
-               <!-- card 1 triangle -->
+            <div class="w-[60%] bg-blue-400 flex items-center justify-center g ">
+               <div class="grid grid-cols-2 gap-6">
+                <!-- card 1 triangle -->
                <div class="card card-compact bg-base-100 w-72 shadow-xl">
                 <figure>
                   <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
+                    src="images/triangle.png"
+                    alt="Triangle" />
                 </figure>
                 <div class="card-body">
-                  <h2 class="card-title">Shoes!</h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <h2 class="card-title">Triangle!</h2>
+                  <p class="font-mono font-semibold">Area (A) = 0.5 * b * h</p>
+                  <div class="text-center flex ">
+                    <input type="text" class="w-24 text-xl p-3 rounded-sm bg-gray-200 h-6" placeholder="b" name="" id="">
+                    <span>CM</span>
+                    <input type="text" class="w-20 ml-4 text-xl p-3 rounded-sm bg-gray-200 h-6" placeholder="h" name="" id="">
+                    <span>CM</span>
+                  </div>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-primary text-pretty w-full">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -128,6 +135,7 @@
                   </div>
                 </div>
               </div>
+               </div>
              </div>
     
              <!-- area calculation container -->
