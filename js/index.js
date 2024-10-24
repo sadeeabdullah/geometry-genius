@@ -25,4 +25,8 @@ document.getElementById('calculate-area').addEventListener('click',function(){
     
     // Show the dialog
     dialouge.showModal();
+
+    document.getElementById('close-dialog').addEventListener('click', function() {
+        dialouge.close();
+      });
 })
