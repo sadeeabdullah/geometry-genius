@@ -43,7 +43,7 @@ document.getElementById('calculate-area').addEventListener('click', function() {
 
   document.getElementById('close-dialog').addEventListener('click', function() {
       dialog.close();
+      document.getElementById('input-b').value = ''
+      document.getElementById('input-h').value=''
   });
-  document.getElementById('input-b').value = ''
-  document.getElementById('input-h').value=''
 });
