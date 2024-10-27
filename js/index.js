@@ -84,7 +84,7 @@ function calculateTriangleArea(b, h) {
         <div class="p-6 bg-blue-600 shadow-lg mx-auto text-center">
             <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
             <p class="text-base text-white mb-6">The area of the rectangle is: 
-                <span class="font-semibold">${areaR} square cm</span>
+                <span class="font-semibold">${areaR} cm<sup>2</sup></span>
             </p>
             <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                 Close
