@@ -9,6 +9,10 @@ function calculateTriangleArea(b, h) {
     const area = w * i;
     return area;
   }
+  function calculateEclipseArea(a, b) { // Fixed function name
+    const area = 3.1416 *a * b;
+    return area;6
+  }
   
   // Triangle Area Calculation Event Listener
   document.getElementById('calculate-area').addEventListener('click', function() {
@@ -114,7 +118,7 @@ function calculateTriangleArea(b, h) {
     }
     
     // Call the function to calculate the area of the rectangle
-    const areaE = calculateRectangleArea(a, b);
+    const areaE = calculateEclipseArea(a, b);
   
     // Create or get the dialog
     let dialog = document.getElementById('result-dialog');
