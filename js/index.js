@@ -101,5 +101,53 @@ function calculateTriangleArea(b, h) {
       document.getElementById('input-i').value = '';
     });
   });
+
+  // eclipse area calculation event listener 
+  // Rectangle Area Calculation Event Listener
+  document.getElementById('calculate-area-eclipse').addEventListener('click', function() {
+  
+    // Fetch input values inside the event listener
+    const a = parseFloat(document.getElementById('input-a').value);
+    const b = parseFloat(document.getElementById('input-b').value);
+    if (isNaN(a) || isNaN(b)) {
+      return alert("Please type a valid number for both width and height");
+    }
+    
+    // Call the function to calculate the area of the rectangle
+    const areaE = calculateRectangleArea(a, b);
+  
+    // Create or get the dialog
+    let dialog = document.getElementById('result-dialog');
+    if (!dialog) {
+      dialog = document.createElement('dialog');
+      dialog.style.borderRadius = '10px';
+      dialog.style.width = '500px';
+      dialog.id = 'result-dialog';
+      document.body.appendChild(dialog);
+    }
+  
+    // Set inner content for the dialog
+    dialog.innerHTML = `
+        <div class="p-6 bg-blue-600 shadow-lg mx-auto text-center">
+            <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
+            <p class="text-base text-white mb-6">The area of the rectangle is: 
+                <span class="font-semibold">${areaE} cm<sup>2</sup></span>
+            </p>
+            <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                Close
+            </button>
+        </div>
+    `;
+    
+    // Show the dialog
+    dialog.showModal();
+  
+    document.getElementById('close-dialog').addEventListener('click', function() {
+      dialog.close();
+      document.getElementById('input-a').value = '';
+      document.getElementById('input-b').value = '';
+    })
+  });
+
 });
   
