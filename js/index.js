@@ -153,5 +153,14 @@ function calculateTriangleArea(b, h) {
     })
   });
 
-});
+  
+  
+  // calculating the eclipse area
+
+  document.getElementById('calculate-area-eclipse').addEventListener(onclick,function(){
+    console.log('hello clicked from eclipse calcualte')
+  })
+
+});  
+
   
