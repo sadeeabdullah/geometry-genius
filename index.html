@@ -49,15 +49,15 @@
     <main class="bg-blue-400 ">
 
         <!-- main content container -->
-         <div class="w-[1400px] flex justify-center py-12">
+         <div class="lg:w-[1400px] mx-auto  py-12">
 
              <!-- div card container -->
-            <div class=" flex items-center justify-center g ">
-               <div class="grid grid-cols-4 gap-6">
+            <div class=" flex justify-center items-center ">
+               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- card 1 triangle -->
                <div class="card card-compact bg-base-100 w-72 shadow-xl">
                 <figure>
-                  <img class="p-6"
+                  <img class="p-6 h-52"
                     src="images/triangle.png"
                     alt="Triangle" />
                 </figure>
@@ -78,7 +78,7 @@
                <!-- card 2 Rectangle  -->
                <div class="card card-compact bg-base-100 w-72 shadow-xl">
                 <figure>
-                  <img class="p-6"
+                  <img class="p-6 h-52"
                     src="images/rectangle.png"
                     alt="Triangle" />
                 </figure>
@@ -99,7 +99,51 @@
                <!-- card 3 Eclipse  -->
                <div class="card card-compact bg-base-100 w-72 shadow-xl">
                 <figure>
-                  <img class="p-6"
+                  <img class="p-6 h-52"
+                    src="images/ellipse.png"
+                    alt="Triangle" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">Eclipse!</h2>
+                  <p class="font-mono font-semibold">Area (A) = &#960; a * b
+                  </p>
+                  <div class="text-center flex ">
+                    <input type="text" class="w-24 text-xl p-3 rounded-sm bg-gray-200 h-6" placeholder="w" name="" id="input-a">
+                    <span>CM</span>
+                    <input type="text" class="w-20 ml-4 text-xl p-3 rounded-sm bg-gray-200 h-6" placeholder="i" name="" id="input-b-elcipse">
+                    <span>CM</span>
+                  </div>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary text-pretty w-full" id="calculate-area-eclipse">Calculate</button>
+                  </div>
+                </div>
+              </div>
+               <!-- card 4 parallelogram  -->
+               <div class="card card-compact bg-base-100 w-72 shadow-xl">
+                <figure>
+                  <img class="p-6 h-52 "
+                    src="images/parallelogram.png"
+                    alt="Triangle" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">Parallelogram!</h2>
+                  <p class="font-mono font-semibold">Area (A) = &#960; a * b
+                  </p>
+                  <div class="text-center flex ">
+                    <input type="text" class="w-24 text-xl p-3 rounded-sm bg-gray-200 h-6" placeholder="w" name="" id="input-a">
+                    <span>CM</span>
+                    <input type="text" class="w-20 ml-4 text-xl p-3 rounded-sm bg-gray-200 h-6" placeholder="i" name="" id="input-b-elcipse">
+                    <span>CM</span>
+                  </div>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary text-pretty w-full" id="calculate-area-eclipse">Calculate</button>
+                  </div>
+                </div>
+              </div>
+               <!-- card 4 rhombus  -->
+               <div class="card card-compact bg-base-100 w-72 shadow-xl">
+                <figure>
+                  <img class="p-6 h-52"
                     src="images/ellipse.png"
                     alt="Triangle" />
                 </figure>

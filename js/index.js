@@ -151,7 +151,7 @@ function calculateTriangleArea(b, h) {
     document.getElementById('close-dialog').addEventListener('click', function() {
       dialog.close();
       document.getElementById('input-a').value = '';
-      document.getElementById('input-b').value = '';
+      document.getElementById('input-b-elcipse').value = '';
     })
   });
 
