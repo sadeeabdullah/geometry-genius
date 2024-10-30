@@ -112,21 +112,23 @@ function calculateTriangleArea(b, h) {
   
     // Fetch input values inside the event listener
     const a = parseFloat(document.getElementById('input-a').value);
-    const b = parseFloat(document.getElementById('input-b').value);
+    const b = parseFloat(document.getElementById('input-b-elcipse').value);
+    console.log(a,b)
     if (isNaN(a) || isNaN(b)) {
       return alert("Please type a valid number for both width and height");
     }
     
     // Call the function to calculate the area of the rectangle
     const areaE = calculateEclipseArea(a, b);
+    console.log(areaE)
   
     // Create or get the dialog
-    let dialog = document.getElementById('result-dialog');
+    let dialog = document.getElementById('result-eclipse-dialog');
     if (!dialog) {
       dialog = document.createElement('dialog');
       dialog.style.borderRadius = '10px';
       dialog.style.width = '500px';
-      dialog.id = 'result-dialog';
+      dialog.id = 'result-eclipse-dialog';
       document.body.appendChild(dialog);
     }
   
@@ -155,11 +157,7 @@ function calculateTriangleArea(b, h) {
 
   
   
-  // calculating the eclipse area
-
-  document.getElementById('calculate-area-eclipse').addEventListener(onclick,function(){
-    console.log('hello clicked from eclipse calcualte')
-  })
+  
 
 });  
 
