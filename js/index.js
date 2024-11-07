@@ -19,7 +19,8 @@ function calculateTriangleArea(b, h) {
   function calculateParallelogramArea(Pa,Pb) {
     const b = Number(Pa), h = Number(Pb);
     area = b * h ;
-    return area
+    console.log(area)
+    return area;
   }
   
   // Triangle Area Calculation Event Listener
@@ -166,6 +167,10 @@ function calculateTriangleArea(b, h) {
   
   document.getElementById('calculate-area-parallelogram').addEventListener('click',function(){
     console.log('button clicked from front')
+    const b = document.getElementById("input-b-parallelogram").value
+    const h = document.getElementById("input-h-parallelogram").value
+    calculateParallelogramArea(b, h)
+    console.log(calculateParallelogramArea(b, h))
   })
   
   
