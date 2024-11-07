@@ -11,7 +11,15 @@ function calculateTriangleArea(b, h) {
   }
   function calculateEclipseArea(a, b) { // Fixed function name
     const area = 3.1416 *a * b;
-    return area;6
+    return area;
+  }
+
+  // function for calculating parallelogram area
+
+  function calculateParallelogramArea(Pa,Pb) {
+    const b = Number(Pa), h = Number(Pb);
+    area = b * h ;
+    return area
   }
   
   // Triangle Area Calculation Event Listener
@@ -156,6 +164,9 @@ function calculateTriangleArea(b, h) {
   });
 
   
+  document.getElementById('calculate-area-parallelogram').addEventListener('click',function(){
+    console.log('button clicked from front')
+  })
   
   
 
