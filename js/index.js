@@ -18,6 +18,9 @@ function calculateTriangleArea(b, h) {
 
   function calculateParallelogramArea(Pa,Pb) {
     const b = Number(Pa), h = Number(Pb);
+    if ( isNaN(Pa) || isNaN(Pb) ){
+      return "error"
+    }
     area = b * h ;
     console.log(area)
     return area;
@@ -140,6 +143,8 @@ function calculateTriangleArea(b, h) {
       dialog.id = 'result-eclipse-dialog';
       document.body.appendChild(dialog);
     }
+
+    
   
     // Set inner content for the dialog
     dialog.innerHTML = `
@@ -170,7 +175,7 @@ function calculateTriangleArea(b, h) {
     const b = document.getElementById("input-b-parallelogram").value
     const h = document.getElementById("input-h-parallelogram").value
     const area = calculateParallelogramArea(b, h)
-    console.log(calculateParallelogramArea(b, h))
+    console.log(typeof calculateParallelogramArea(b, h))
 
         // Create or get the dialog
         let dialog = document.getElementById('result-parallelogram-dialog');
@@ -181,19 +186,22 @@ function calculateTriangleArea(b, h) {
           dialog.id = 'result-parallelogram-dialog';
           document.body.appendChild(dialog);
         }
+
+        
       
         // Set inner content for the dialog
-        dialog.innerHTML = `
-            <div class="p-6 bg-blue-600 shadow-lg mx-auto text-center">
-                <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
-                <p class="text-base text-white mb-6">The area of the rectangle is: 
-                    <span class="font-semibold">${area} cm<sup>2</sup></span>
-                </p>
-                <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                    Close
-                </button>
-            </div>
-        `;
+        dialog.innerHTML =  
+   `<div class="p-6  ${typeof area !== 'string' ? `bg-blue-400` : `bg-red-300` } shadow-lg mx-auto text-center">
+        <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
+        <p class="text-base text-white mb-6">  ${typeof area !== 'string' ? 
+        `he area of the rectangle is: <span class="font-semibold">${area} cm<sup>2</sup></span>` : 
+        '<span class="font-semibold">Invalid area value</span>'}
+        </p>
+        <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            Close
+        </button>
+    </div>` 
+
         // Show the dialog
     dialog.showModal();
   
