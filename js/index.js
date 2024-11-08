@@ -209,6 +209,8 @@ function calculateTriangleArea(b, h) {
       dialog.close();
       document.getElementById('input-a').value = '';
       document.getElementById('input-b-elcipse').value = '';
+      document.getElementById("input-b-parallelogram").value = ''
+      document.getElementById("input-h-parallelogram").value = ''
     })
   })
   
