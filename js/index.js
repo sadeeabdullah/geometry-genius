@@ -169,8 +169,39 @@ function calculateTriangleArea(b, h) {
     console.log('button clicked from front')
     const b = document.getElementById("input-b-parallelogram").value
     const h = document.getElementById("input-h-parallelogram").value
-    calculateParallelogramArea(b, h)
+    const area = calculateParallelogramArea(b, h)
     console.log(calculateParallelogramArea(b, h))
+
+        // Create or get the dialog
+        let dialog = document.getElementById('result-parallelogram-dialog');
+        if (!dialog) {
+          dialog = document.createElement('dialog');
+          dialog.style.borderRadius = '10px';
+          dialog.style.width = '500px';
+          dialog.id = 'result-parallelogram-dialog';
+          document.body.appendChild(dialog);
+        }
+      
+        // Set inner content for the dialog
+        dialog.innerHTML = `
+            <div class="p-6 bg-blue-600 shadow-lg mx-auto text-center">
+                <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
+                <p class="text-base text-white mb-6">The area of the rectangle is: 
+                    <span class="font-semibold">${area} cm<sup>2</sup></span>
+                </p>
+                <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    Close
+                </button>
+            </div>
+        `;
+        // Show the dialog
+    dialog.showModal();
+  
+    document.getElementById('close-dialog').addEventListener('click', function() {
+      dialog.close();
+      document.getElementById('input-a').value = '';
+      document.getElementById('input-b-elcipse').value = '';
+    })
   })
   
   
