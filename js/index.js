@@ -213,6 +213,49 @@ function calculateTriangleArea(b, h) {
       document.getElementById("input-h-parallelogram").value = ''
     })
   })
+  document.getElementById('calculate-area-rhombus').addEventListener('click',function(){
+    console.log('button clicked from front')
+    const b = document.getElementById("input-b-rhombus").value
+    const h = document.getElementById("input-h-rhombus").value
+    const area = calculaterhombusArea(b, h)
+    console.log(typeof calculaterhombusArea(b, h))
+
+        // Create or get the dialog
+        let dialog = document.getElementById('result-rhombus-dialog');
+        if (!dialog) {
+          dialog = document.createElement('dialog');
+          dialog.style.borderRadius = '10px';
+          dialog.style.width = '500px';
+          dialog.id = 'result-rhombus-dialog';
+          document.body.appendChild(dialog);
+        }
+
+        
+      
+        // Set inner content for the dialog
+        dialog.innerHTML =  
+   `<div class="p-6  ${typeof area !== 'string' ? `bg-blue-400` : `bg-red-300` } shadow-lg mx-auto text-center">
+        <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
+        <p class="text-base text-white mb-6">  ${typeof area !== 'string' ? 
+        `he area of the rectangle is: <span class="font-semibold">${area} cm<sup>2</sup></span>` : 
+        '<span class="font-semibold">Invalid area value</span>'}
+        </p>
+        <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            Close
+        </button>
+    </div>` 
+
+        // Show the dialog
+    dialog.showModal();
+  
+    document.getElementById('close-dialog').addEventListener('click', function() {
+      dialog.close();
+      document.getElementById('input-a-rhombus').value = '';
+      document.getElementById('input-b-rhombus').value = '';
+      document.getElementById("input-b-rhombus").value = ''
+      document.getElementById("input-h-rhombus").value = ''
+    })
+  })
   
   
 
