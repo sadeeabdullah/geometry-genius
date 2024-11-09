@@ -25,6 +25,18 @@ function calculateTriangleArea(b, h) {
     console.log(area)
     return area;
   }
+  // function for calculating Rhombus area
+
+  function calculateRhombusArea(Pa,Pb) {
+    const b = Number(Pa), h = Number(Pb);
+    if ( isNaN(b) || isNaN(h) ){
+      return "error"
+    }
+    console.log(b,h)
+    area = 0.5 * b * h ;
+    console.log(area)
+    return area;
+  }
   
   // Triangle Area Calculation Event Listener
   document.getElementById('calculate-area').addEventListener('click', function() {
@@ -207,54 +219,53 @@ function calculateTriangleArea(b, h) {
   
     document.getElementById('close-dialog').addEventListener('click', function() {
       dialog.close();
-      document.getElementById('input-a').value = '';
-      document.getElementById('input-b-elcipse').value = '';
+      
       document.getElementById("input-b-parallelogram").value = ''
       document.getElementById("input-h-parallelogram").value = ''
     })
   })
   document.getElementById('calculate-area-rhombus').addEventListener('click',function(){
     console.log('button clicked from front')
-    const b = document.getElementById("input-b-rhombus").value
-    const h = document.getElementById("input-h-rhombus").value
-    const area = calculaterhombusArea(b, h)
-    console.log(typeof calculaterhombusArea(b, h))
+    const d1 = document.getElementById("input-d1-rhombus").value;
+    const d2 = document.getElementById("input-d2-rhombus").value;
+    console.log(d1,d2)
 
-        // Create or get the dialog
-        let dialog = document.getElementById('result-rhombus-dialog');
-        if (!dialog) {
-          dialog = document.createElement('dialog');
-          dialog.style.borderRadius = '10px';
-          dialog.style.width = '500px';
-          dialog.id = 'result-rhombus-dialog';
-          document.body.appendChild(dialog);
-        }
+  //   const area = calculateRhombusArea(b, h)
+  //   console.log(typeof calculateRhombusArea(b, h))
+
+  //       // Create or get the dialog
+  //       let dialog = document.getElementById('result-rhombus-dialog');
+  //       if (!dialog) {
+  //         dialog = document.createElement('dialog');
+  //         dialog.style.borderRadius = '10px';
+  //         dialog.style.width = '500px';
+  //         dialog.id = 'result-rhombus-dialog';
+  //         document.body.appendChild(dialog);
+  //       }
 
         
       
-        // Set inner content for the dialog
-        dialog.innerHTML =  
-   `<div class="p-6  ${typeof area !== 'string' ? `bg-blue-400` : `bg-red-300` } shadow-lg mx-auto text-center">
-        <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
-        <p class="text-base text-white mb-6">  ${typeof area !== 'string' ? 
-        `he area of the rectangle is: <span class="font-semibold">${area} cm<sup>2</sup></span>` : 
-        '<span class="font-semibold">Invalid area value</span>'}
-        </p>
-        <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-            Close
-        </button>
-    </div>` 
+  //       // Set inner content for the dialog
+  //       dialog.innerHTML =  
+  //  `<div class="p-6  ${typeof area !== 'string' ? `bg-blue-400` : `bg-red-300` } shadow-lg mx-auto text-center">
+  //       <h3 class="text-lg font-bold text-white mb-4">Calculation Result</h3>
+  //       <p class="text-base text-white mb-6">  ${typeof area !== 'string' ? 
+  //       `The area of the rectangle is: <span class="font-semibold">${area} cm<sup>2</sup></span>` : 
+  //       '<span class="font-semibold">Invalid area value</span>'}
+  //       </p>
+  //       <button id="close-dialog" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+  //           Close
+  //       </button>
+  //   </div>` 
 
-        // Show the dialog
-    dialog.showModal();
+  //       // Show the dialog
+  //   dialog.showModal();
   
-    document.getElementById('close-dialog').addEventListener('click', function() {
-      dialog.close();
-      document.getElementById('input-a-rhombus').value = '';
-      document.getElementById('input-b-rhombus').value = '';
-      document.getElementById("input-b-rhombus").value = ''
-      document.getElementById("input-h-rhombus").value = ''
-    })
+  //   document.getElementById('close-dialog').addEventListener('click', function() {
+  //     dialog.close();
+  //     document.getElementById('input-a-rhombus').value = '';
+  //     document.getElementById('input-b-rhombus').value = '';
+  //   })
   })
   
   
