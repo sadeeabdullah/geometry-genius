@@ -264,8 +264,8 @@ function calculateTriangleArea(b, h) {
   
     document.getElementById('close-dialog').addEventListener('click', function() {
       dialog.close();
-      document.getElementById('input-a-rhombus').value = '';
-      document.getElementById('input-b-rhombus').value = '';
+      document.getElementById('input-d1-rhombus').value = '';
+      document.getElementById('input-d2-rhombus').value = '';
     })
   })
   
